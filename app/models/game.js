@@ -5,7 +5,9 @@ mongoose.Promise = global.Promise;
 const dbURI = "mongodb+srv://learning:learning@nodep.hj4i2.mongodb.net/nodep"; 
 
 var promise = mongoose.connect(dbURI, {
-  useMongoClient: true,
+  // useMongoClient: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true
   /* other options */
 });
 

@@ -2,7 +2,7 @@
 // grab the mongoose module
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-const dbURI = "mongodb+srv://learning:learning@nodep.hj4i2.mongodb.net/nodep"; 
+const dbURI = process.env.MONGO_URL; 
 
 var promise = mongoose.connect(dbURI, {
   // useMongoClient: true,
